@@ -7,7 +7,10 @@ then
   SERIAL_USB_DEV=/dev/cu.usbserial
 fi
 
-
-[ ! -f ${SERIAL_USB_DEV} ] && "Echo no USB ${SERIAL_USB_DEV}" && exit -1
+if [ ! -f ${SERIAL_USB_DEV} ]
+then
+   "Echo no USB ${SERIAL_USB_DEV}"
+   exit -1
+fi
 
 screen ${SERIAL_USB_DEV} 115200
