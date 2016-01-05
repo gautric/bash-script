@@ -1,5 +1,7 @@
 #!/bin/sh
 
+## Tested with https://www.adafruit.com/product/954
+
 SERIAL_USB_DEV=/dev/ttyUSB0
 
 if uname -a | grep Darwin > /dev/null
