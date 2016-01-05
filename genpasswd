@@ -1,0 +1,3 @@
+#!/bin/sh
+
+for i in `seq 1 10`; do dd if=/dev/urandom count=1 2> /dev/null | uuencode -m -| head -n 2 | tail -n 1 | cut -c-32; done 
